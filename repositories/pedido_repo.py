@@ -92,7 +92,7 @@ class PedidoRepo:
             return False
     @classmethod
     def atualizar_valor_total(
-        cls, id: int, valor_total: float
+        cls, id: int, valor_total: float = 0
     ) -> bool:
         if not valor_total:
             itens = ItemPedidoRepo.obter_por_pedido(id)
