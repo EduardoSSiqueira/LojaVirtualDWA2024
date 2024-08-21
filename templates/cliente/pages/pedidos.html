@@ -14,19 +14,19 @@
         </tr>
     </thead>
     <tbody>
-        {% for p in pedido: %}
+        {% for p in pedidos: %}
         <tr>
-            <td>{{p.id}}</td>
-            <td>{{p.data_hora}}</td>
-            <td>{{p.valor_total}}</td>
-            <td>{{p.estado}}</td>
+            <td>{{ p.id }}</td>
+            <td>{{ p.data_hora }}</td>
+            <td>{{ p.valor_total }}</td>
+            <td>{{ p.estado }}</td>
             <td>
-                <a class="btn btn-danger btn-sm" href="/cliente/detalhespedido/{{p.id}}">
+                <a class="btn btn-danger btn-sm" href="/cliente/detalhespedido/{{ p.id }}">
                     Ver Detalhes
                 </a>
             </td>
         </tr>
-        {%endfor%}
+        {% endfor %}
     </tbody>
 </table>
 {% endblock %}
